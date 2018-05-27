@@ -211,5 +211,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\1.png" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\avatar1.jpg" />
+    <Content Include="img\Close.png" />
+    <Content Include="img\Close1.png" />
+    <Content Include="img\icons8_Door_52px_1.png" />
+    <Content Include="img\icons8_Home_25px.png" />
+    <Content Include="img\icons8_Home_50px_1.png" />
+    <Content Include="img\icons8_Hotel_50px.png" />
+    <Content Include="img\icons8_Money_Bag_50px.png" />
+    <Content Include="img\icons8_Search_50px.png" />
+    <Content Include="img\icons8_User_50px_1.png" />
+    <Content Include="img\luxury_hotel-wallpaper-1366x768.jpg" />
+    <Content Include="img\Minimize.png" />
+    <Content Include="img\Minimize1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
