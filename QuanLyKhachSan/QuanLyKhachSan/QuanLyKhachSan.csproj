@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>F:\Developer\C#\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
@@ -53,7 +53,6 @@
   <ItemGroup>
     <Compile Include="Controller\ChuanHoa.cs" />
     <Compile Include="Controller\Connection.cs" />
-    <Compile Include="Controller\TrangChuController.cs" />
     <Compile Include="HotelObject\DichVuHo.cs" />
     <Compile Include="HotelObject\KhachHangHo.cs" />
     <Compile Include="HotelObject\NhanVienHo.cs" />
@@ -211,5 +210,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
