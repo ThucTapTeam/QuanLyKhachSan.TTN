@@ -12,15 +12,17 @@ namespace QuanLyKhachSan.Layout
 {
     public partial class TrangChuControl : UserControl
     {
-       
+        Connection conn = new Connection();
+        int tang;
+        string laytenphong;
         public TrangChuControl()
         {
             InitializeComponent();
-            
+          
         }
         private void lb1(object sender, EventArgs e)
         {
-           
+            EventKTTang(1);
         }
         private void lb2(object sender, EventArgs e)
         {
@@ -81,20 +83,58 @@ namespace QuanLyKhachSan.Layout
         private void Display(int tang)
         {
            
-
         }
         private void DDTang_Select(object sender, EventArgs e)
         {
-            
+            if (DDTang.selectedValue.ToString() == "Tầng 2")
+            {
+                Display(2);
+                tang = 2;
+            }
+            else if (DDTang.selectedValue.ToString() == "Tầng 3")
+            {
+                Display(3);
+                tang = 3;
+            }
+            else if (DDTang.selectedValue.ToString() == "Tầng 4")
+            {
+                Display(4);
+                tang = 4;
+            }
+            else if (DDTang.selectedValue.ToString() == "Tầng 5")
+            {
+                Display(5);
+                tang = 5;
+            }
         }
         private void EventKTTang(int a)
         {
-            
+            if (tang == 2)
+            {
+            }
+            else if (tang == 3)
+            {
+
+            }
+            else if (tang == 4)
+            {
+
+            }
+            else if (tang == 5)
+            {
+
+            }
         }
 
         private void btdattraphong_Click(object sender, EventArgs e)
         {
-            
+            if (btdattraphong.Text == "Trả Phòng")
+            {
+                SubLayout.FormThanhToan ftt = new SubLayout.FormThanhToan(laytenphong, tang);
+                ftt.Show();
+                conn.InsertDeleteUpdate("UPDATE THUEPHONG SET TRANGTHAI=0 WHERE MAPHONG IN (SELECT MAPHONG FROM PHONG WHERE TENPHONG='" + laytenphong + "')");
+               
+            }
         }
 
         private void btlammoi_Click(object sender, EventArgs e)
