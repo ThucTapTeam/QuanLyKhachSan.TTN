@@ -80,11 +80,11 @@ namespace QuanLyKhachSan.Layout
         {
             EventKTTang(15);
         }
-        private void Display(int tang)
+        private void Display(int tang)//chuc nang hien thi so tang
         {
            
         }
-        private void DDTang_Select(object sender, EventArgs e)
+        private void DDTang_Select(object sender, EventArgs e)//drop down so tang
         {
             if (DDTang.selectedValue.ToString() == "Tầng 2")
             {
@@ -107,7 +107,7 @@ namespace QuanLyKhachSan.Layout
                 tang = 5;
             }
         }
-        private void EventKTTang(int a)
+        private void EventKTTang(int a)//Kiem tra so tang
         {
             if (tang == 2)
             {
@@ -126,7 +126,7 @@ namespace QuanLyKhachSan.Layout
             }
         }
 
-        private void btdattraphong_Click(object sender, EventArgs e)
+        private void btdattraphong_Click(object sender, EventArgs e)//button dat tra phong
         {
             if (btdattraphong.Text == "Trả Phòng")
             {
@@ -137,7 +137,7 @@ namespace QuanLyKhachSan.Layout
             }
         }
 
-        private void btlammoi_Click(object sender, EventArgs e)
+        private void btlammoi_Click(object sender, EventArgs e)//button lam moi lai thong tin phong
         {
             
         }
