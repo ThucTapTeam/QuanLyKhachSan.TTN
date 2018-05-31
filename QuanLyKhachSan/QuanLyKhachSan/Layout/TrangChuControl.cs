@@ -12,13 +12,16 @@ namespace QuanLyKhachSan.Layout
 {
     public partial class TrangChuControl : UserControl
     {
+        Controller.TrangChuController tcc = new Controller.TrangChuController();
         Connection conn = new Connection();
         int tang;
         string laytenphong;
         public TrangChuControl()
         {
             InitializeComponent();
-          
+            tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, 2);
+            tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, 2);
+            tang = 2;
         }
         private void lb1(object sender, EventArgs e)
         {
@@ -80,11 +83,13 @@ namespace QuanLyKhachSan.Layout
         {
             EventKTTang(15);
         }
-        private void Display(int tang)//chuc nang hien thi so tang
+        private void Display(int tang)
         {
-           
+            tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, tang);
+            tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, tang);
+
         }
-        private void DDTang_Select(object sender, EventArgs e)//drop down so tang
+        private void DDTang_Select(object sender, EventArgs e)
         {
             if (DDTang.selectedValue.ToString() == "Tầng 2")
             {
@@ -107,39 +112,42 @@ namespace QuanLyKhachSan.Layout
                 tang = 5;
             }
         }
-        private void EventKTTang(int a)//Kiem tra so tang
+        private void EventKTTang(int a)
         {
             if (tang == 2)
             {
+                tcc.Tang(2, a, out laytenphong, btdattraphong);
             }
             else if (tang == 3)
             {
-
+                tcc.Tang(3, a, out laytenphong, btdattraphong);
             }
             else if (tang == 4)
             {
-
+                tcc.Tang(4, a, out laytenphong, btdattraphong);
             }
             else if (tang == 5)
             {
-
+                tcc.Tang(5, a, out laytenphong, btdattraphong);
             }
         }
 
-        private void btdattraphong_Click(object sender, EventArgs e)//button dat tra phong
+        private void btdattraphong_Click(object sender, EventArgs e)
         {
             if (btdattraphong.Text == "Trả Phòng")
             {
                 SubLayout.FormThanhToan ftt = new SubLayout.FormThanhToan(laytenphong, tang);
                 ftt.Show();
                 conn.InsertDeleteUpdate("UPDATE THUEPHONG SET TRANGTHAI=0 WHERE MAPHONG IN (SELECT MAPHONG FROM PHONG WHERE TENPHONG='" + laytenphong + "')");
-               
+                tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, tang);
+                tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, tang);
             }
         }
 
-        private void btlammoi_Click(object sender, EventArgs e)//button lam moi lai thong tin phong
+        private void btlammoi_Click(object sender, EventArgs e)
         {
-            
+            tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, tang);
+            tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, tang);
         }
     }
 }
