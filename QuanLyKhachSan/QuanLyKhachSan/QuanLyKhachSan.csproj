@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Controller\ChuanHoa.cs" />
     <Compile Include="Controller\Connection.cs" />
+    <Compile Include="Controller\DatPhongController.cs" />
     <Compile Include="Controller\DoanhThuController.cs" />
     <Compile Include="Controller\TrangChuController.cs" />
     <Compile Include="HotelObject\DichVuHo.cs" />
