@@ -13,16 +13,18 @@ namespace QuanLyKhachSan.Layout.SubLayout
     public partial class FormThanhToan : Form
     {
         string laytenphong;
-        public FormThanhToan(string tenphong,int sotang)
+        public FormThanhToan(string tenphong, int sotang)
         {
             InitializeComponent();
-            
+            lbsotang.Text = sotang.ToString();
+            lbtenphong.Text = tenphong;
+            laytenphong = tenphong;
         }
         Connection conn = new Connection();
         private void btthanhtoan_Click(object sender, EventArgs e)
         {
-            
-            this.Hide();     
+
+            this.Hide();
         }
 
     }
