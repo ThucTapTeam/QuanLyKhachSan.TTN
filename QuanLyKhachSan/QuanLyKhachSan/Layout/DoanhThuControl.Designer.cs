@@ -49,22 +49,22 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lbphongvip = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.bunifuProgressBar2 = new Bunifu.Framework.UI.BunifuProgressBar();
-            this.label18 = new System.Windows.Forms.Label();
+            this.PBphongvip = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.lbphongthuong = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.PBphongthuong = new Bunifu.Framework.UI.BunifuProgressBar();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lbslkhachtang = new System.Windows.Forms.Label();
+            this.lbsl = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.bunifuProgressBar3 = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.PBslkhachtang = new Bunifu.Framework.UI.BunifuProgressBar();
             this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lbslktthangnay = new System.Windows.Forms.Label();
+            this.lbslktthangtruoc = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -297,26 +297,26 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
-            this.panel7.Controls.Add(this.label19);
+            this.panel7.Controls.Add(this.lbphongvip);
             this.panel7.Controls.Add(this.label20);
-            this.panel7.Controls.Add(this.bunifuProgressBar2);
-            this.panel7.Controls.Add(this.label18);
+            this.panel7.Controls.Add(this.PBphongvip);
+            this.panel7.Controls.Add(this.lbphongthuong);
             this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.bunifuProgressBar1);
+            this.panel7.Controls.Add(this.PBphongthuong);
             this.panel7.Location = new System.Drawing.Point(0, 42);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(367, 150);
             this.panel7.TabIndex = 0;
             // 
-            // label19
+            // lbphongvip
             // 
-            this.label19.Font = new System.Drawing.Font("Quicksand", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(124, 72);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(227, 28);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "40 %";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbphongvip.Font = new System.Drawing.Font("Quicksand", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbphongvip.Location = new System.Drawing.Point(124, 72);
+            this.lbphongvip.Name = "lbphongvip";
+            this.lbphongvip.Size = new System.Drawing.Size(227, 28);
+            this.lbphongvip.TabIndex = 27;
+            this.lbphongvip.Text = "40 %";
+            this.lbphongvip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
             // 
@@ -328,27 +328,27 @@
             this.label20.TabIndex = 26;
             this.label20.Text = "Phòng vip";
             // 
-            // bunifuProgressBar2
+            // PBphongvip
             // 
-            this.bunifuProgressBar2.BackColor = System.Drawing.Color.White;
-            this.bunifuProgressBar2.BorderRadius = 5;
-            this.bunifuProgressBar2.Location = new System.Drawing.Point(124, 103);
-            this.bunifuProgressBar2.MaximumValue = 100;
-            this.bunifuProgressBar2.Name = "bunifuProgressBar2";
-            this.bunifuProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.bunifuProgressBar2.Size = new System.Drawing.Size(227, 10);
-            this.bunifuProgressBar2.TabIndex = 25;
-            this.bunifuProgressBar2.Value = 40;
+            this.PBphongvip.BackColor = System.Drawing.Color.White;
+            this.PBphongvip.BorderRadius = 5;
+            this.PBphongvip.Location = new System.Drawing.Point(124, 103);
+            this.PBphongvip.MaximumValue = 100;
+            this.PBphongvip.Name = "PBphongvip";
+            this.PBphongvip.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.PBphongvip.Size = new System.Drawing.Size(227, 10);
+            this.PBphongvip.TabIndex = 25;
+            this.PBphongvip.Value = 40;
             // 
-            // label18
+            // lbphongthuong
             // 
-            this.label18.Font = new System.Drawing.Font("Quicksand", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(124, 14);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(227, 28);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "40 %";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbphongthuong.Font = new System.Drawing.Font("Quicksand", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbphongthuong.Location = new System.Drawing.Point(124, 14);
+            this.lbphongthuong.Name = "lbphongthuong";
+            this.lbphongthuong.Size = new System.Drawing.Size(227, 28);
+            this.lbphongthuong.TabIndex = 24;
+            this.lbphongthuong.Text = "40 %";
+            this.lbphongthuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17
             // 
@@ -360,17 +360,17 @@
             this.label17.TabIndex = 24;
             this.label17.Text = "Phòng thường";
             // 
-            // bunifuProgressBar1
+            // PBphongthuong
             // 
-            this.bunifuProgressBar1.BackColor = System.Drawing.Color.White;
-            this.bunifuProgressBar1.BorderRadius = 5;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(124, 45);
-            this.bunifuProgressBar1.MaximumValue = 100;
-            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.bunifuProgressBar1.Size = new System.Drawing.Size(227, 10);
-            this.bunifuProgressBar1.TabIndex = 0;
-            this.bunifuProgressBar1.Value = 40;
+            this.PBphongthuong.BackColor = System.Drawing.Color.White;
+            this.PBphongthuong.BorderRadius = 5;
+            this.PBphongthuong.Location = new System.Drawing.Point(124, 45);
+            this.PBphongthuong.MaximumValue = 100;
+            this.PBphongthuong.Name = "PBphongthuong";
+            this.PBphongthuong.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.PBphongthuong.Size = new System.Drawing.Size(227, 10);
+            this.PBphongthuong.TabIndex = 0;
+            this.PBphongthuong.Value = 40;
             // 
             // panel3
             // 
@@ -396,13 +396,13 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(206)))), ((int)(((byte)(201)))));
-            this.panel6.Controls.Add(this.label27);
-            this.panel6.Controls.Add(this.label28);
+            this.panel6.Controls.Add(this.lbslkhachtang);
+            this.panel6.Controls.Add(this.lbsl);
             this.panel6.Controls.Add(this.label26);
-            this.panel6.Controls.Add(this.bunifuProgressBar3);
+            this.panel6.Controls.Add(this.PBslkhachtang);
             this.panel6.Controls.Add(this.label25);
-            this.panel6.Controls.Add(this.label24);
-            this.panel6.Controls.Add(this.label23);
+            this.panel6.Controls.Add(this.lbslktthangnay);
+            this.panel6.Controls.Add(this.lbslktthangtruoc);
             this.panel6.Controls.Add(this.label22);
             this.panel6.Controls.Add(this.label21);
             this.panel6.Location = new System.Drawing.Point(0, 42);
@@ -410,26 +410,26 @@
             this.panel6.Size = new System.Drawing.Size(367, 150);
             this.panel6.TabIndex = 1;
             // 
-            // label27
+            // lbslkhachtang
             // 
-            this.label27.Font = new System.Drawing.Font("Quicksand", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(127, 95);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(227, 28);
-            this.label27.TabIndex = 30;
-            this.label27.Text = "40 %";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbslkhachtang.Font = new System.Drawing.Font("Quicksand", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbslkhachtang.Location = new System.Drawing.Point(127, 95);
+            this.lbslkhachtang.Name = "lbslkhachtang";
+            this.lbslkhachtang.Size = new System.Drawing.Size(227, 28);
+            this.lbslkhachtang.TabIndex = 30;
+            this.lbslkhachtang.Text = "40 %";
+            this.lbslkhachtang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label28
+            // lbsl
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Quicksand Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(36, 110);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 30);
-            this.label28.TabIndex = 29;
-            this.label28.Text = "Tăng";
+            this.lbsl.AutoSize = true;
+            this.lbsl.Font = new System.Drawing.Font("Quicksand Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsl.ForeColor = System.Drawing.Color.Red;
+            this.lbsl.Location = new System.Drawing.Point(36, 110);
+            this.lbsl.Name = "lbsl";
+            this.lbsl.Size = new System.Drawing.Size(60, 30);
+            this.lbsl.TabIndex = 29;
+            this.lbsl.Text = "Tăng";
             // 
             // label26
             // 
@@ -441,17 +441,17 @@
             this.label26.TabIndex = 32;
             this.label26.Text = "phòng";
             // 
-            // bunifuProgressBar3
+            // PBslkhachtang
             // 
-            this.bunifuProgressBar3.BackColor = System.Drawing.Color.White;
-            this.bunifuProgressBar3.BorderRadius = 5;
-            this.bunifuProgressBar3.Location = new System.Drawing.Point(127, 126);
-            this.bunifuProgressBar3.MaximumValue = 100;
-            this.bunifuProgressBar3.Name = "bunifuProgressBar3";
-            this.bunifuProgressBar3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.bunifuProgressBar3.Size = new System.Drawing.Size(227, 10);
-            this.bunifuProgressBar3.TabIndex = 28;
-            this.bunifuProgressBar3.Value = 40;
+            this.PBslkhachtang.BackColor = System.Drawing.Color.White;
+            this.PBslkhachtang.BorderRadius = 5;
+            this.PBslkhachtang.Location = new System.Drawing.Point(127, 126);
+            this.PBslkhachtang.MaximumValue = 100;
+            this.PBslkhachtang.Name = "PBslkhachtang";
+            this.PBslkhachtang.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.PBslkhachtang.Size = new System.Drawing.Size(227, 10);
+            this.PBslkhachtang.TabIndex = 28;
+            this.PBslkhachtang.Value = 40;
             // 
             // label25
             // 
@@ -463,25 +463,25 @@
             this.label25.TabIndex = 31;
             this.label25.Text = "phòng";
             // 
-            // label24
+            // lbslktthangnay
             // 
-            this.label24.Font = new System.Drawing.Font("Quicksand Medium", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(167, 43);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(96, 39);
-            this.label24.TabIndex = 30;
-            this.label24.Text = "40";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbslktthangnay.Font = new System.Drawing.Font("Quicksand Medium", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbslktthangnay.Location = new System.Drawing.Point(167, 43);
+            this.lbslktthangnay.Name = "lbslktthangnay";
+            this.lbslktthangnay.Size = new System.Drawing.Size(96, 39);
+            this.lbslktthangnay.TabIndex = 30;
+            this.lbslktthangnay.Text = "40";
+            this.lbslktthangnay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label23
+            // lbslktthangtruoc
             // 
-            this.label23.Font = new System.Drawing.Font("Quicksand Medium", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(167, 3);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(96, 39);
-            this.label23.TabIndex = 28;
-            this.label23.Text = "40";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbslktthangtruoc.Font = new System.Drawing.Font("Quicksand Medium", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbslktthangtruoc.Location = new System.Drawing.Point(167, 3);
+            this.lbslktthangtruoc.Name = "lbslktthangtruoc";
+            this.lbslktthangtruoc.Size = new System.Drawing.Size(96, 39);
+            this.lbslktthangtruoc.TabIndex = 28;
+            this.lbslktthangtruoc.Text = "40";
+            this.lbslktthangtruoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label22
             // 
@@ -874,19 +874,19 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbphongvip;
         private System.Windows.Forms.Label label20;
-        private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar2;
-        private System.Windows.Forms.Label label18;
+        private Bunifu.Framework.UI.BunifuProgressBar PBphongvip;
+        private System.Windows.Forms.Label lbphongthuong;
         private System.Windows.Forms.Label label17;
-        private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar1;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
+        private Bunifu.Framework.UI.BunifuProgressBar PBphongthuong;
+        private System.Windows.Forms.Label lbslkhachtang;
+        private System.Windows.Forms.Label lbsl;
         private System.Windows.Forms.Label label26;
-        private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar3;
+        private Bunifu.Framework.UI.BunifuProgressBar PBslkhachtang;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lbslktthangnay;
+        private System.Windows.Forms.Label lbslktthangtruoc;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label37;
