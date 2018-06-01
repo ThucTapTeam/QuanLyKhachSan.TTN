@@ -19,6 +19,9 @@ namespace QuanLyKhachSan.Layout.SubLayout
             lbsotang.Text = sotang.ToString();
             lbtenphong.Text = tenphong;
             laytenphong = tenphong;
+
+            Controller.ThanhToanController ttc = new Controller.ThanhToanController();
+            ttc.ThanhToan(lbtenphong, lbhoten, lbloaiphong, lbngayvao, lbngayra, lbthanhtien, lbdichvu, lbtongtien);
         }
         Connection conn = new Connection();
         private void btthanhtoan_Click(object sender, EventArgs e)
