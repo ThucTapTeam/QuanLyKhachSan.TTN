@@ -62,6 +62,10 @@ namespace QuanLyKhachSan
                 temp = sqldatar[cot].ToString();
             }
             ngatketnoi();
+            if(temp=="")
+            {
+                temp = "0";
+            }
             return temp;
         }
         public string sophong(string strsql,byte cot)

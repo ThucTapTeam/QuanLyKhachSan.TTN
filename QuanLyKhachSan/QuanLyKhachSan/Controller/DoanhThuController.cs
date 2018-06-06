@@ -82,13 +82,30 @@ namespace QuanLyKhachSan.Controller
             if (sophongthangtruoc == 0) sophongthangtruoc = 1;
             if (sophongthangnay>sophongthangtruoc)
             {
-                lbphongthuong.Text ="Tăng  " + (sophongthangnay * 100 / sophongthangtruoc).ToString() + "%";
-                PBphongthuong.Value = (sophongthangnay * 100 / sophongthangtruoc);
+                if (sophongthangtruoc != 0)
+                {
+                    lbphongthuong.Text = "Tăng  " + (sophongthangnay * 100 / sophongthangtruoc).ToString() + "%";
+                    PBphongthuong.Value = (sophongthangnay * 100 / sophongthangtruoc);
+                }
+                else
+                {
+                    lbphongthuong.Text = "Tăng 100 %";
+                    PBphongthuong.Value = 100;
+                }             
             }
             else if (sophongthangnay < sophongthangtruoc)
             {
-                lbphongthuong.Text = "Giảm  " + (sophongthangtruoc * 100 / sophongthangnay).ToString() + "%";
-                PBphongthuong.Value = (sophongthangtruoc * 100 / sophongthangnay) ;
+                if (sophongthangtruoc != 0)
+                {
+                    lbphongthuong.Text = "Giảm  " + (sophongthangtruoc * 100 / sophongthangnay).ToString() + "%";
+                    PBphongthuong.Value = (sophongthangtruoc * 100 / sophongthangnay);
+                }
+                else
+                {
+                    lbphongthuong.Text = "Giảm 100 %";
+                    PBphongthuong.Value = 100;
+                }
+                
             }
             else if (sophongthangnay == sophongthangtruoc)
             {
@@ -103,13 +120,31 @@ namespace QuanLyKhachSan.Controller
             if (sophongthangtruoc1 == 0) sophongthangtruoc1 = 1;
             if (sophongthangnay1 > sophongthangtruoc1)
             {
-                lbphongvip.Text = "Tăng  " + (sophongthangtruoc1 * 100 / sophongthangnay1).ToString() + "%";
-                PBphongvip.Value = (sophongthangtruoc1 * 100 / sophongthangnay1);
+                if (sophongthangtruoc1 != 0)
+                {
+                    lbphongvip.Text = "Tăng  " + (sophongthangtruoc1 * 100 / sophongthangnay1).ToString() + "%";
+                    PBphongvip.Value = (sophongthangtruoc1 * 100 / sophongthangnay1);
+                }
+                else
+                {
+                    lbphongvip.Text = "Tăng 100 %";
+                    PBphongvip.Value = 100;
+                }
+                
             }
             else if (sophongthangnay1 < sophongthangtruoc1)
             {
-                lbphongvip.Text = "Giảm  " + (sophongthangnay1 * 100 / sophongthangtruoc1).ToString() + "%";
-                PBphongvip.Value = (sophongthangnay1 * 100 / sophongthangtruoc1);
+                if (sophongthangtruoc1 != 0)
+                {
+                    lbphongvip.Text = "Giảm  " + (sophongthangnay1 * 100 / sophongthangtruoc1).ToString() + "%";
+                    PBphongvip.Value = (sophongthangnay1 * 100 / sophongthangtruoc1);
+                }
+                else
+                {
+                    lbphongvip.Text = "Giảm 100 %";
+                    PBphongvip.Value = 100;
+                }
+                
             }
             else if (sophongthangnay1 == sophongthangtruoc1)
             {
@@ -122,6 +157,15 @@ namespace QuanLyKhachSan.Controller
             ch.ChuanHoaDate(DateTime.Now.ToString(), out day, out month, out year);
             int slktthangtruoc = 0;
             int slktthangnay = 0;
+            if (month == "1")
+            {
+                month1 = "12";
+                year1 = (Convert.ToInt32(year) - 1).ToString();
+            }
+            else
+            {
+                month1 = (Convert.ToInt32(month) - 1).ToString();
+            }
             slktthangtruoc = Convert.ToInt32(conn.LayBien("EXEC PROC_TLSOLUONGKHACH '" + month + "','" + year + "'", 0));
             slktthangnay = Convert.ToInt32(conn.LayBien("EXEC PROC_TLSOLUONGKHACH '" + month1 + "','" + year + "'", 0));
             lbslktthangtruoc.Text = slktthangtruoc.ToString();
@@ -130,20 +174,97 @@ namespace QuanLyKhachSan.Controller
             if (slktthangnay > slktthangtruoc)
             {
                 lbsl.Text = "Tăng";
-                lbslkhachtang.Text = (slktthangtruoc * 100 / slktthangnay) .ToString() + " %";
-                PBslkhachtang.Value = (slktthangtruoc * 100 / slktthangnay);
+                
+                if (slktthangtruoc != 0)
+                {
+                    lbslkhachtang.Text = (slktthangtruoc * 100 / slktthangnay).ToString() + " %";
+                    PBslkhachtang.Value = (slktthangtruoc * 100 / slktthangnay);
+                }
+                else
+                {
+                    lbslkhachtang.Text = "100 %";
+                    PBslkhachtang.Value = 100;
+
+                }
             }
             else if (slktthangnay < slktthangtruoc)
             {
                 lbsl.Text = "Giảm";
-                lbslkhachtang.Text = (slktthangnay * 100 / slktthangtruoc) .ToString() + " %";
-                PBslkhachtang.Value = (slktthangnay * 100 / slktthangtruoc);
+                if (slktthangnay != 0)
+                {
+                    lbslkhachtang.Text = (slktthangnay * 100 / slktthangtruoc).ToString() + " %";
+                    PBslkhachtang.Value = (slktthangnay * 100 / slktthangtruoc);
+                }
+                else
+                {
+                    lbslkhachtang.Text = "100 %";
+                    PBslkhachtang.Value = 100;
+
+                }
+                
             }
             else if (slktthangnay == slktthangtruoc)
             {
                 lbsl.Text = "Không đổi";
                 lbslkhachtang.Text = " ";
                 PBslkhachtang.Value = 0;
+            }
+        }
+        public void DoanhThuDichVu(Label lbdtdvthangtrc, Label lbdtdvthangnay, BunifuProgressBar Pbdtdv, Label lbPbdoanhthu,Label dtdvtanggiam)
+        {
+            ch.ChuanHoaDate(DateTime.Now.ToString(), out day, out month, out year);
+            int dtdvthangtruoc = 0;
+            int dtdvthangnay = 0;
+            if (month == "1")
+            {
+                month1 = "12";
+                year1 = (Convert.ToInt32(year) - 1).ToString();
+            }
+            else
+            {
+                month1 = (Convert.ToInt32(month) - 1).ToString();
+            }
+            dtdvthangtruoc = Convert.ToInt32(conn.LayBien("EXEC PROC_DOANHTHUDICHVU '" + month + "','" + year + "'", 0));
+            dtdvthangnay = Convert.ToInt32(conn.LayBien("EXEC PROC_DOANHTHUDICHVU '" + month1 + "','" + year + "'", 0));
+            lbdtdvthangtrc.Text = dtdvthangtruoc.ToString();
+            lbdtdvthangnay.Text = dtdvthangnay.ToString();
+            if (dtdvthangnay > dtdvthangtruoc)
+            {
+                dtdvtanggiam.Text = "Tăng";
+                
+                if(dtdvthangtruoc!=0)
+                {
+                    lbPbdoanhthu.Text = (dtdvthangtruoc * 100 / dtdvthangnay).ToString() + " %";
+                    Pbdtdv.Value = (dtdvthangtruoc * 100 / dtdvthangnay);
+                }
+                else
+                {
+                    lbPbdoanhthu.Text = "100 %";
+                    Pbdtdv.Value = 100;
+
+                }
+            }
+            else if (dtdvthangnay < dtdvthangtruoc)
+            {
+                dtdvtanggiam.Text = "Giảm";
+                
+                if (dtdvthangnay != 0)
+                {
+                    lbPbdoanhthu.Text = (dtdvthangnay * 100 / dtdvthangtruoc).ToString() + " %";
+                    Pbdtdv.Value = (dtdvthangnay * 100 / dtdvthangtruoc);
+                }
+                else
+                {
+                    lbPbdoanhthu.Text = "100 %";
+                    Pbdtdv.Value = 100;
+
+                }
+            }
+            else if (dtdvthangnay == dtdvthangtruoc)
+            {
+                dtdvtanggiam.Text = "Không đổi";
+                lbPbdoanhthu.Text = " ";
+                Pbdtdv.Value = 0;
             }
         }
     }

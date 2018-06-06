@@ -20,6 +20,7 @@ namespace QuanLyKhachSan.Layout
             dtc.DoanhThuTong1(switchdoanhthu, DPDoanhThu, lbdtdatphong, lbsophong, lbdichvu);
             dtc.TyLeDatPhong(lbphongthuong,lbphongvip,PBphongthuong,PBphongvip);
             dtc.TyLeSoLuongKhach(lbslktthangtruoc, lbslktthangnay, lbslkhachtang, PBslkhachtang,lbsl);
+            dtc.DoanhThuDichVu(lbdtdvthangtrc, lbdtdvthangnay, Pbdtdv, lbPbdoanhthu, dtdvtanggiam);
         }
 
         private void switchdoanhthu_Change(object sender, EventArgs e)
