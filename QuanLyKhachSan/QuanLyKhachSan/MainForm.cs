@@ -14,7 +14,27 @@ namespace QuanLyKhachSan
     {
         public MainForm(string hoten, string chucvu, string avatar)
         {
-            
+            InitializeComponent();
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.TrangChuControl());
+            label1.Text = hoten;
+            label2.Text = chucvu;
+            pictureBox1.Image = Image.FromFile(avatar);
+            if (chucvu != "Quản Lý")
+            {
+                btqlynhanvien.Enabled = false;
+                btdoanhthu.Enabled = false;
+                btdoanhthu.Cursor = Cursors.Default;
+                btqlynhanvien.Cursor = Cursors.Default;
+            }
+            else
+            {
+                btqlynhanvien.Enabled = true;
+                btdoanhthu.Enabled = true;
+                btdoanhthu.Cursor = Cursors.Hand;
+                btqlynhanvien.Cursor = Cursors.Hand;
+
+            }
         }
         private void close_Hover(object sender, EventArgs e)
         {
@@ -53,7 +73,8 @@ namespace QuanLyKhachSan
 
         private void btqlnhanvien_Click(object sender, EventArgs e)
         {
-            
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.QLNhanVienControl());
         }
 
         private void btdown_Down(object sender, MouseEventArgs e)

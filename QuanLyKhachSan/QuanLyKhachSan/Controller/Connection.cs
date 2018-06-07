@@ -10,7 +10,7 @@ namespace QuanLyKhachSan
 {
     class Connection
     {
-        string conn = "Data Source=DESKTOP-SSCJKUR;Initial Catalog=QLKS;Integrated Security=True";
+        string conn = "Data Source=DESKTOP-GF9FG24;Initial Catalog=QLKS;Integrated Security=True";
         SqlConnection sqlconn;
         SqlCommand sqlcom;
         SqlDataAdapter sqldataa;
