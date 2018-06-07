@@ -12,9 +12,9 @@ namespace QuanLyKhachSan
 {
     public partial class MainForm : Form
     {
-        public MainForm(string hoten, string chucvu, string avatar)
+        public MainForm(/*string hoten, string chucvu, string avatar*/)
         {
-            
+            InitializeComponent();
         }
         private void close_Hover(object sender, EventArgs e)
         {
@@ -68,7 +68,8 @@ namespace QuanLyKhachSan
 
         private void btdichvu_Click(object sender, EventArgs e)
         {
-            
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.FormDichVu());
         }
 
         private void btdoanhthu_Click(object sender, EventArgs e)
@@ -78,7 +79,8 @@ namespace QuanLyKhachSan
 
         private void btqlphong_Click(object sender, EventArgs e)
         {
-           
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.QLPhong());
         }
     }
 }

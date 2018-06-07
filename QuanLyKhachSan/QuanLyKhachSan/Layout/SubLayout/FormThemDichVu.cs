@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace QuanLyKhachSan.Layout.SubLayout
         {
             InitializeComponent();
         }
+        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
+        SqlCommand cmdDV;
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
         {
@@ -66,7 +69,62 @@ namespace QuanLyKhachSan.Layout.SubLayout
 
         private void btchapnhan_Click(object sender, EventArgs e)
         {
-           
+            int transfer;
+            Controller.ThemDVController tdv = new Controller.ThemDVController();
+            tdv.ThemDichVu(tbtendv, tbgiatien, out transfer);
+            if (transfer == 1)
+            {
+                this.Hide();
+            }
+        }
+
+        private void FormThemDichVu_Load(object sender, EventArgs e)
+        {
+            if (HotelObject.getDta_DV.UpdateMode == true)
+            {
+                bunifuFlatButton1.Visible = false;
+                label3.Text = "Tên trước đó: " + HotelObject.getDta_DV.tenDV;
+                label6.Text = "Giá trước đó: " + HotelObject.getDta_DV.giaDv;
+                tbtendv.Text = HotelObject.getDta_DV.tenDV;
+                tbgiatien.Text = HotelObject.getDta_DV.giaDv;
+            }
+            else
+            {
+                btnUpdate.Visible = false;
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ChuanHoa ch = new ChuanHoa();
+            HotelObject.DichVuHo dv = new HotelObject.DichVuHo();
+            if (tbtendv.Text.Length == 0 || tbgiatien.Text.Length == 0)
+            {
+                Notification nf = new Notification("LỖI", "Không được để trống các trường.", "Mời bạn nhập đầy đủ.");
+                nf.Show();
+            }
+            else
+            {
+                if (ch.Check_Text_Name(tbtendv) == false)
+                {
+                    Notification nf = new Notification("LỖI", "Tên dịch vụ chứa chữ số.", "Mời bạn nhập lại.");
+                    nf.Show();
+                }
+                else if (ch.Check_Number(tbgiatien) == false)
+                {
+                    Notification nf = new Notification("LỖI", "Gía tiền chỉ được nhập số.", "Mời bạn nhập lại.");
+                    nf.Show();
+                }
+                else
+                {
+                    con.Open();
+                    cmdDV = new SqlCommand("EXECUTE IUD_DICHVU '" + HotelObject.getDta_DV.maDV + "',N'" + tbtendv.Text + "','" + tbgiatien.Text + "',N'Update'", con);
+                    cmdDV.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Cập nhật thành công");
+                    this.Hide();
+                }
+            }
         }
     }
 }

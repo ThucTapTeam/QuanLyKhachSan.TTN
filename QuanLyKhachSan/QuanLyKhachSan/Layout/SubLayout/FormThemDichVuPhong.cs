@@ -67,12 +67,12 @@ namespace QuanLyKhachSan.Layout.SubLayout
         
         private void ddsotang_Selected(object sender, EventArgs e)
         {
-            dvphong.LayTenPhong(ddsotang,ddtenphong);
+            
         }
 
         private void ddtenphong_Selected(object sender, EventArgs e)
         {
-            dvphong.LayLoaiPhong(ddtenphong,tenphong,loaiphong);
+            
         }
 
         private void btthemdichvu_Click(object sender, EventArgs e)
