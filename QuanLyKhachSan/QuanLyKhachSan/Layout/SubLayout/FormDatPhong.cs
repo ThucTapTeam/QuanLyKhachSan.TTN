@@ -14,8 +14,12 @@ namespace QuanLyKhachSan
     {
         public FormDatPhong(string sophong, string tangso)
         {
-            
 
+            InitializeComponent();
+            label2.Text = sophong;
+            label8.Text = "Tầng " + tangso;
+            DPNgayDat.Value = DateTime.Now;
+            DPNgayTra.Value = DateTime.Now;
         }
         ChuanHoa ch = new ChuanHoa();
         private const int CS_DROPSHADOW = 0x00020000;
@@ -53,7 +57,7 @@ namespace QuanLyKhachSan
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+
         }
 
         private void mini_Click(object sender, EventArgs e)
@@ -67,7 +71,7 @@ namespace QuanLyKhachSan
         }
         private void dpngaytra_Change(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dpdatphong_Change(object sender, EventArgs e)
@@ -75,9 +79,15 @@ namespace QuanLyKhachSan
         }
         private void btdatphong_Click(object sender, EventArgs e)
         {
-           
+            int transfer;
+            Controller.DatPhongController dpc = new Controller.DatPhongController();
+            dpc.DatPhong(tbhoten, ddGioiTinh, tbsocmt, tbphone, DPNgayDat, DPNgayTra, label2, label8, out transfer);
+            if (transfer == 1)
+            {
+                this.Hide();
+            }
         }
-        
-        
+
+
     }
 }
