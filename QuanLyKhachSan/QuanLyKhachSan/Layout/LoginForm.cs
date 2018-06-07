@@ -8,12 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKhachSan.Layout.SubLayout
+namespace QuanLyKhachSan
 {
-    public partial class FormThemDichVuPhong : Form
+    public partial class LoginForm : Form
     {
-        
-        public FormThemDichVuPhong()
+        public LoginForm()
         {
             InitializeComponent();
             
@@ -52,7 +51,8 @@ namespace QuanLyKhachSan.Layout.SubLayout
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+            
         }
 
         private void mini_Click(object sender, EventArgs e)
@@ -60,24 +60,9 @@ namespace QuanLyKhachSan.Layout.SubLayout
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void bthuy_Click(object sender, EventArgs e)
+        private void btlogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-        }
-        
-        private void ddsotang_Selected(object sender, EventArgs e)
-        {
-            //dvphong.LayTenPhong(ddsotang,ddtenphong);
-        }
-
-        private void ddtenphong_Selected(object sender, EventArgs e)
-        {
-            //dvphong.LayLoaiPhong(ddtenphong,tenphong,loaiphong);
-        }
-
-        private void btthemdichvu_Click(object sender, EventArgs e)
-        {
-            
+           
         }
     }
 }
