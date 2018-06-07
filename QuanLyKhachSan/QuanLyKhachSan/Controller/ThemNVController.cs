@@ -10,17 +10,18 @@ using DevComponents.DotNetBar.Controls;
 
 namespace QuanLyKhachSan.Controller
 {
+    //commit lại
     public class ThemNVController
     {
         string day, month, year;
         Connection conn = new Connection();
-        public void ThemNhanVien(TextBoxX tbhoten,BunifuDropdown ddGioiTinh, TextBoxX tbpass, TextBoxX tbphone,BunifuDatepicker DPNgaySinh, BunifuDropdown ddchucvu,string btavtar,out int transfer)
+        public void ThemNhanVien(TextBoxX tbhoten, BunifuDropdown ddGioiTinh, TextBoxX tbpass, TextBoxX tbphone, BunifuDatepicker DPNgaySinh, BunifuDropdown ddchucvu, string btavtar, out int transfer)
         {
             transfer = 0;
-            HotelObject.NhanVienHo nv = new HotelObject.NhanVienHo(); 
-            string temp=null;
+            HotelObject.NhanVienHo nv = new HotelObject.NhanVienHo();
+            string temp = null;
             ChuanHoa ch = new ChuanHoa();
-            nv.NgaySinh= DPNgaySinh.Value.ToString();
+            nv.NgaySinh = DPNgaySinh.Value.ToString();
             ch.ChuanHoaDate(nv.NgaySinh, out day, out month, out year);
             nv.NgaySinh = year + month + day;
             nv.MaNhanVien = conn.LayBien("EXEC PROC_SELECT_MANHANVIEN", 0);
@@ -28,15 +29,15 @@ namespace QuanLyKhachSan.Controller
             {
                 temp = temp + nv.NgaySinh[i];
             }
-            nv.NgaySinh = "NV"+ (Int32.Parse(temp) + 1).ToString();
+            nv.NgaySinh = "NV" + (Int32.Parse(temp) + 1).ToString();
             nv.HoTen = ch.CH_Name(tbhoten);
-            if(ch.Check_Phone(tbphone)==false)
+            if (ch.Check_Phone(tbphone) == false)
             {
                 Notification nf = new Notification("LỖI", "Số điện thoại không hợp lệ", "Mời bạn nhập lại.");
                 nf.Show();
                 transfer = 0;
             }
-            else if(ch.Check_Text_Name(tbhoten)==false)
+            else if (ch.Check_Text_Name(tbhoten) == false)
             {
                 Notification nf = new Notification("LỖI", "Tên nhập chứa chữ số", "Mời bạn nhập lại.");
                 nf.Show();
@@ -49,7 +50,7 @@ namespace QuanLyKhachSan.Controller
                 nf.Show();
                 transfer = 1;
             }
-            
+
         }
     }
 }

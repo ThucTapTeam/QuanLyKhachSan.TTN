@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+// commit lại
 namespace QuanLyKhachSan.Layout.SubLayout
 {
     public partial class FormThemNV : Form
@@ -70,13 +70,19 @@ namespace QuanLyKhachSan.Layout.SubLayout
             {
                 pbavatar.Image = Image.FromFile(fileAvatar.FileName);
                 label8.Text = fileAvatar.SafeFileName;
-                linkavatar= fileAvatar.FileName;
+                linkavatar = fileAvatar.FileName;
             }
         }
 
         private void btdatphong_Click(object sender, EventArgs e)
         {
-            
+            Controller.ThemNVController themnv = new Controller.ThemNVController();
+            int transfer;
+            themnv.ThemNhanVien(tbhoten, ddGioiTinh, tbpass, tbphone, DPNgaySinh, ddchucvu, linkavatar, out transfer);
+            if (transfer == 1)
+            {
+                this.Hide();
+            }
         }
     }
 }

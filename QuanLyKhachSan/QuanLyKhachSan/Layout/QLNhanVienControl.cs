@@ -20,7 +20,8 @@ namespace QuanLyKhachSan.Layout
 
         private void btthemnv_Click(object sender, EventArgs e)
         {
-           
+            SubLayout.FormThemNV themNV = new SubLayout.FormThemNV();
+            themNV.Show();
         }
     }
 }

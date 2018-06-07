@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
@@ -53,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Controller\ChuanHoa.cs" />
     <Compile Include="Controller\Connection.cs" />
+    <Compile Include="Controller\ThemNVController.cs" />
     <Compile Include="HotelObject\DichVuHo.cs" />
     <Compile Include="HotelObject\KhachHangHo.cs" />
     <Compile Include="HotelObject\NhanVienHo.cs" />
