@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyKhachSan.Layout
 {
@@ -17,16 +18,29 @@ namespace QuanLyKhachSan.Layout
             InitializeComponent();
         }
 
+        public void DisplayData()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SSCJKUR;Initial Catalog=QLKS;Integrated Security=True");
+            SqlDataAdapter adapt;
+            SqlCommand cmdDV;
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from dbo.[phong]", con);
+            adapt.Fill(dt);
+            dataPhong.DataSource = dt;
+            con.Close();
+        }
+
         private void btthemdichvu_Click(object sender, EventArgs e)
         {
             SubLayout.FormThemDichVuPhong ftdvp = new SubLayout.FormThemDichVuPhong();
             ftdvp.ShowDialog();
-            this.pHONGTableAdapter.Fill(this.dataSet_PHONG.PHONG);
+            DisplayData();
         }
 
         private void QLPhong_Load(object sender, EventArgs e)
         {
-            this.pHONGTableAdapter.Fill(this.dataSet_PHONG.PHONG);
+            DisplayData();
         }
     }
 }

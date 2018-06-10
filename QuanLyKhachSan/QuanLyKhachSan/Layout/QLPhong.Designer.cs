@@ -38,21 +38,21 @@
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataSet_PHONG = new QuanLyKhachSan.DataSet_PHONG();
-            this.pHONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pHONGTableAdapter = new QuanLyKhachSan.DataSet_PHONGTableAdapters.PHONGTableAdapter();
+            this.dataPhong = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.mAPHONGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENPHONGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mALOAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gIATHUEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sOTANGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_PHONG = new QuanLyKhachSan.DataSet_PHONG();
+            this.pHONGTableAdapter = new QuanLyKhachSan.DataSet_PHONGTableAdapters.PHONGTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_PHONG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_PHONG)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuFlatButton2
@@ -149,16 +149,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "QUẢN LÝ PHÒNG";
             // 
-            // bunifuCustomDataGrid1
+            // dataPhong
             // 
-            this.bunifuCustomDataGrid1.AllowUserToAddRows = false;
-            this.bunifuCustomDataGrid1.AllowUserToDeleteRows = false;
+            this.dataPhong.AllowUserToAddRows = false;
+            this.dataPhong.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.AutoGenerateColumns = false;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataPhong.AutoGenerateColumns = false;
+            this.dataPhong.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataPhong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,39 +166,25 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeight = 25;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataPhong.ColumnHeadersHeight = 25;
+            this.dataPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mAPHONGDataGridViewTextBoxColumn,
             this.tENPHONGDataGridViewTextBoxColumn,
             this.mALOAIDataGridViewTextBoxColumn,
             this.gIATHUEDataGridViewTextBoxColumn,
             this.sOTANGDataGridViewTextBoxColumn});
-            this.bunifuCustomDataGrid1.DataSource = this.pHONGBindingSource;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(19, 139);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.ReadOnly = true;
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(758, 418);
-            this.bunifuCustomDataGrid1.TabIndex = 10;
-            // 
-            // dataSet_PHONG
-            // 
-            this.dataSet_PHONG.DataSetName = "DataSet_PHONG";
-            this.dataSet_PHONG.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pHONGBindingSource
-            // 
-            this.pHONGBindingSource.DataMember = "PHONG";
-            this.pHONGBindingSource.DataSource = this.dataSet_PHONG;
-            // 
-            // pHONGTableAdapter
-            // 
-            this.pHONGTableAdapter.ClearBeforeFill = true;
+            this.dataPhong.DataSource = this.pHONGBindingSource;
+            this.dataPhong.DoubleBuffered = true;
+            this.dataPhong.EnableHeadersVisualStyles = false;
+            this.dataPhong.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dataPhong.HeaderForeColor = System.Drawing.Color.White;
+            this.dataPhong.Location = new System.Drawing.Point(19, 139);
+            this.dataPhong.Name = "dataPhong";
+            this.dataPhong.ReadOnly = true;
+            this.dataPhong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataPhong.Size = new System.Drawing.Size(758, 418);
+            this.dataPhong.TabIndex = 10;
             // 
             // mAPHONGDataGridViewTextBoxColumn
             // 
@@ -240,12 +226,26 @@
             this.sOTANGDataGridViewTextBoxColumn.Name = "sOTANGDataGridViewTextBoxColumn";
             this.sOTANGDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // pHONGBindingSource
+            // 
+            this.pHONGBindingSource.DataMember = "PHONG";
+            this.pHONGBindingSource.DataSource = this.dataSet_PHONG;
+            // 
+            // dataSet_PHONG
+            // 
+            this.dataSet_PHONG.DataSetName = "DataSet_PHONG";
+            this.dataSet_PHONG.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pHONGTableAdapter
+            // 
+            this.pHONGTableAdapter.ClearBeforeFill = true;
+            // 
             // QLPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.bunifuCustomDataGrid1);
+            this.Controls.Add(this.dataPhong);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.panel1);
             this.Name = "QLPhong";
@@ -255,9 +255,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_PHONG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_PHONG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,7 +269,7 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dataPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAPHONGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENPHONGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mALOAIDataGridViewTextBoxColumn;

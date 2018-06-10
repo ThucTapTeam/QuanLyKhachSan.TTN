@@ -68,7 +68,9 @@ namespace QuanLyKhachSan
 
         private void bttrangchu(object sender, EventArgs e)
         {
-           
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.TrangChuControl());
+
         }
 
         private void btqlnhanvien_Click(object sender, EventArgs e)
@@ -79,27 +81,36 @@ namespace QuanLyKhachSan
 
         private void btdown_Down(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void btlogout_Click(object sender, EventArgs e)
         {
-            
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
         }
 
         private void btdichvu_Click(object sender, EventArgs e)
         {
-            
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.FormDichVu());
         }
 
         private void btdoanhthu_Click(object sender, EventArgs e)
         {
-           
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.DoanhThuControl());
         }
 
         private void btqlphong_Click(object sender, EventArgs e)
         {
-           
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.QLPhong());
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
         }
     }
 }
