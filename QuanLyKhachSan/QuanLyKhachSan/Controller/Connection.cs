@@ -10,7 +10,7 @@ namespace QuanLyKhachSan
 {
     class Connection
     {
-        string conn = "Data Source=DESKTOP-SSCJKUR;Initial Catalog=QLKS;Integrated Security=True";
+        string conn = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True";
         SqlConnection sqlconn;
         SqlCommand sqlcom;
         SqlDataAdapter sqldataa;
@@ -100,6 +100,22 @@ namespace QuanLyKhachSan
             sqlcom = new SqlCommand(strsql, sqlconn);
             sqldatar = sqlcom.ExecuteReader();
             ngatketnoi();
+        }
+
+        public void getUserInfo(string user)
+        {
+            ketnoi();
+            string sql = "select * from dbo.NHANVIEN where MANHANVIEN='" + user + "'";
+            sqlcom = new SqlCommand(sql, sqlconn);
+            sqldatar = sqlcom.ExecuteReader(); //select ExecuteReader();  insert/delete ExecuteNonQuery
+            if (sqldatar.Read() == true)
+            {
+                UserInfo.ID = user;
+                UserInfo.HoTen = sqldatar["HOTEN"].ToString();
+                UserInfo.ChucVu = sqldatar["CHUCVU"].ToString();
+                ngatketnoi();
+            }
+            else ngatketnoi();
         }
     }
 }

@@ -19,7 +19,14 @@ namespace QuanLyKhachSan.Layout
 
         private void btthemdichvu_Click(object sender, EventArgs e)
         {
+            SubLayout.FormThemDichVuPhong ftdvp = new SubLayout.FormThemDichVuPhong();
+            ftdvp.ShowDialog();
+            this.pHONGTableAdapter.Fill(this.dataSet_PHONG.PHONG);
+        }
 
+        private void QLPhong_Load(object sender, EventArgs e)
+        {
+            this.pHONGTableAdapter.Fill(this.dataSet_PHONG.PHONG);
         }
     }
 }

@@ -53,7 +53,32 @@
   <ItemGroup>
     <Compile Include="Controller\ChuanHoa.cs" />
     <Compile Include="Controller\Connection.cs" />
+    <Compile Include="Controller\ThemDvController.cs" />
+    <Compile Include="Controller\ThemNVController.cs" />
+    <Compile Include="DataSet_DICHVU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_DICHVU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_NV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_NV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_PHONG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_PHONG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="HotelObject\DichVuHo.cs" />
+    <Compile Include="HotelObject\getDta_DV.cs" />
+    <Compile Include="HotelObject\getDta_NV.cs" />
     <Compile Include="HotelObject\KhachHangHo.cs" />
     <Compile Include="HotelObject\NhanVienHo.cs" />
     <Compile Include="HotelObject\PhongHo.cs" />
@@ -146,6 +171,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInfo.cs" />
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\QLPhong.resx">
       <DependentUpon>QLPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +226,39 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet_DICHVU.xsc">
+      <DependentUpon>DataSet_DICHVU.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_DICHVU.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_DICHVU.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_DICHVU.xss">
+      <DependentUpon>DataSet_DICHVU.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_NV.xsc">
+      <DependentUpon>DataSet_NV.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_NV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_NV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_NV.xss">
+      <DependentUpon>DataSet_NV.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_PHONG.xsc">
+      <DependentUpon>DataSet_PHONG.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_PHONG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_PHONG.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_PHONG.xss">
+      <DependentUpon>DataSet_PHONG.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

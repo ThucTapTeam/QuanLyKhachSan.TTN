@@ -14,7 +14,27 @@ namespace QuanLyKhachSan
     {
         public MainForm(string hoten, string chucvu, string avatar)
         {
-            
+            InitializeComponent();
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.TrangChuControl());
+            label1.Text = hoten;
+            label2.Text = chucvu;
+            pictureBox1.Image = Image.FromFile(avatar);
+            if (chucvu != "Quản Lý")
+            {
+                btqlynhanvien.Enabled = false;
+                btdoanhthu.Enabled = false;
+                btdoanhthu.Cursor = Cursors.Default;
+                btqlynhanvien.Cursor = Cursors.Default;
+            }
+            else
+            {
+                btqlynhanvien.Enabled = true;
+                btdoanhthu.Enabled = true;
+                btdoanhthu.Cursor = Cursors.Hand;
+                btqlynhanvien.Cursor = Cursors.Hand;
+
+            }
         }
         private void close_Hover(object sender, EventArgs e)
         {
@@ -48,12 +68,14 @@ namespace QuanLyKhachSan
 
         private void bttrangchu(object sender, EventArgs e)
         {
-           
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.TrangChuControl());
         }
 
         private void btqlnhanvien_Click(object sender, EventArgs e)
         {
-            
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.QLNhanVienControl());
         }
 
         private void btdown_Down(object sender, MouseEventArgs e)
@@ -63,22 +85,33 @@ namespace QuanLyKhachSan
 
         private void btlogout_Click(object sender, EventArgs e)
         {
-            
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
         }
 
         private void btdichvu_Click(object sender, EventArgs e)
         {
-            
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.FormDichVu());
         }
 
         private void btdoanhthu_Click(object sender, EventArgs e)
         {
-           
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.DoanhThuControl());
         }
 
         private void btqlphong_Click(object sender, EventArgs e)
         {
-           
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.QLPhong());
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau dmk = new DoiMatKhau();
+            dmk.ShowDialog();
         }
     }
 }
