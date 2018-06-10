@@ -20,7 +20,7 @@ namespace QuanLyKhachSan.Layout
 
         public void DisplayData()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SSCJKUR;Initial Catalog=QLKS;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
             SqlDataAdapter adapt;
             SqlCommand cmdDV;
             con.Open();
