@@ -53,7 +53,8 @@ namespace QuanLyKhachSan
 
         private void btqlnhanvien_Click(object sender, EventArgs e)
         {
-            
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.QLNhanVienControl());
         }
 
         private void btdown_Down(object sender, MouseEventArgs e)
@@ -81,6 +82,12 @@ namespace QuanLyKhachSan
         {
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Layout.QLPhong());
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau dmk = new DoiMatKhau();
+            dmk.ShowDialog();
         }
     }
 }
