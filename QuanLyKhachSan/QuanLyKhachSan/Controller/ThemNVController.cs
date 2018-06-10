@@ -25,11 +25,16 @@ namespace QuanLyKhachSan.Controller
             ch.ChuanHoaDate(nv.NgaySinh, out day, out month, out year);
             nv.NgaySinh = year + month + day;
             nv.MaNhanVien = conn.LayBien("EXEC PROC_SELECT_MANHANVIEN", 0);
-            for (int i = 2; i < nv.NgaySinh.Length; i++)
+            if (nv.MaNhanVien == "" || nv.MaNhanVien == null||nv.MaNhanVien=="1"||nv.MaNhanVien=="ADMIN")
             {
-                temp = temp + nv.NgaySinh[i];
+                nv.MaNhanVien = "NV1234";
             }
-            nv.NgaySinh = "NV" + (Int32.Parse(temp) + 1).ToString();
+
+            for (int i = 2; i < nv.MaNhanVien.Length; i++)
+            {
+                temp = temp + nv.MaNhanVien[i];
+            }
+            nv.MaNhanVien = "NV" + (Int32.Parse(temp) + 1).ToString();
             nv.HoTen = ch.CH_Name(tbhoten);
             if (ch.Check_Phone(tbphone) == false)
             {
@@ -45,7 +50,7 @@ namespace QuanLyKhachSan.Controller
             }
             else
             {
-                conn.InsertDeleteUpdate("EXEC PROC_INSERT_NHANVIEN '" + nv.MaNhanVien + "','" + tbpass.Text + "',N'" + tbhoten.Text + "',N'" + ddchucvu.selectedValue + "',N'" + ddGioiTinh.selectedValue + "','" + btavtar + "','" + year + month + day + "','" + tbphone.Text + "'");
+                conn.InsertDeleteUpdate("EXEC PROC_INSERT_NHANVIEN '" + nv.MaNhanVien + "','" + tbpass.Text + "',N'" + tbhoten.Text + "',N'" + ddchucvu.selectedValue + "',N'" + ddGioiTinh.selectedValue + "',N'" + btavtar + "','" + year + month + day + "','" + tbphone.Text + "'");
                 Notification nf = new Notification("THÊM NHÂN VIÊN", "Thêm nhân viên thành công.", "Mã nhân viên :" + nv.MaNhanVien);
                 nf.Show();
                 transfer = 1;

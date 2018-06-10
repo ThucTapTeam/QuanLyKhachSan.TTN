@@ -46,6 +46,7 @@ namespace QuanLyKhachSan
                         MKCmd = new SqlCommand("Update NHANVIEN set PASS='" + txtMK2.Text + "' where MANHANVIEN ='" + comboBox1.Text + "'", con);
                         MKCmd.ExecuteNonQuery();
                         MessageBox.Show("Đổi thành công");
+                        this.Hide();
                     }
                 }
                 else

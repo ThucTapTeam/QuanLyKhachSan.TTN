@@ -28,18 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataDatPhong = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -73,7 +67,18 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            this.DPDate = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dataSet_ThuePhong = new QuanLyKhachSan.DataSet_ThuePhong();
+            this.tHUEPHONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tHUEPHONGTableAdapter = new QuanLyKhachSan.DataSet_ThuePhongTableAdapters.THUEPHONGTableAdapter();
+            this.mATHUEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mAKHACHHANGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mAPHONGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nGAYVAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nGAYRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tRANGTHAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DataDatPhong)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -89,101 +94,65 @@
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_ThuePhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHUEPHONGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuCustomDataGrid1
+            // DataDatPhong
             // 
+            this.DataDatPhong.AllowUserToAddRows = false;
+            this.DataDatPhong.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DataDatPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataDatPhong.AutoGenerateColumns = false;
+            this.DataDatPhong.BackgroundColor = System.Drawing.Color.White;
+            this.DataDatPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataDatPhong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Quicksand Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14});
-            this.bunifuCustomDataGrid1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DataDatPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DataDatPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataDatPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mATHUEDataGridViewTextBoxColumn,
+            this.mAKHACHHANGDataGridViewTextBoxColumn,
+            this.mAPHONGDataGridViewTextBoxColumn,
+            this.nGAYVAODataGridViewTextBoxColumn,
+            this.nGAYRADataGridViewTextBoxColumn,
+            this.tRANGTHAIDataGridViewTextBoxColumn});
+            this.DataDatPhong.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DataDatPhong.DataSource = this.tHUEPHONGBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Quicksand", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(8, 250);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DataDatPhong.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataDatPhong.DoubleBuffered = true;
+            this.DataDatPhong.EnableHeadersVisualStyles = false;
+            this.DataDatPhong.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
+            this.DataDatPhong.HeaderForeColor = System.Drawing.Color.White;
+            this.DataDatPhong.Location = new System.Drawing.Point(8, 292);
+            this.DataDatPhong.Name = "DataDatPhong";
+            this.DataDatPhong.ReadOnly = true;
+            this.DataDatPhong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Quicksand Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuCustomDataGrid1.RowHeadersVisible = false;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(784, 329);
-            this.bunifuCustomDataGrid1.TabIndex = 46;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "STT";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 30;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Họ tên";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 151;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Giới tính";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 92;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Số CMT";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 130;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Điện thoại";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 120;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Ngày giờ vào";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 130;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Ngày giờ ra";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 130;
+            this.DataDatPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DataDatPhong.RowHeadersVisible = false;
+            this.DataDatPhong.Size = new System.Drawing.Size(784, 287);
+            this.DataDatPhong.TabIndex = 46;
             // 
             // panel10
             // 
@@ -198,7 +167,7 @@
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(17, 19);
             this.label10.Name = "label10";
@@ -221,7 +190,7 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(17, 19);
             this.label5.Name = "label5";
@@ -244,7 +213,7 @@
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(17, 19);
             this.label9.Name = "label9";
@@ -267,7 +236,7 @@
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(17, 19);
             this.label4.Name = "label4";
@@ -290,7 +259,7 @@
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(17, 19);
             this.label8.Name = "label8";
@@ -313,7 +282,7 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(17, 19);
             this.label3.Name = "label3";
@@ -336,7 +305,7 @@
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(17, 19);
             this.label7.Name = "label7";
@@ -359,7 +328,7 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(17, 19);
             this.label6.Name = "label6";
@@ -382,7 +351,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 19);
             this.label2.Name = "label2";
@@ -405,7 +374,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 19);
             this.label1.Name = "label1";
@@ -468,7 +437,7 @@
             this.btdattraphong.Text = "Đặt Phòng";
             this.btdattraphong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btdattraphong.Textcolor = System.Drawing.Color.White;
-            this.btdattraphong.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdattraphong.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btdattraphong.Click += new System.EventHandler(this.btdattraphong_Click);
             // 
             // panel11
@@ -484,7 +453,7 @@
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(17, 19);
             this.label11.Name = "label11";
@@ -507,7 +476,7 @@
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(17, 19);
             this.label12.Name = "label12";
@@ -530,7 +499,7 @@
             // 
             // label13
             // 
-            this.label13.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(17, 19);
             this.label13.Name = "label13";
@@ -553,7 +522,7 @@
             // 
             // label14
             // 
-            this.label14.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(17, 19);
             this.label14.Name = "label14";
@@ -576,7 +545,7 @@
             // 
             // label15
             // 
-            this.label15.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(17, 19);
             this.label15.Name = "label15";
@@ -618,17 +587,111 @@
             this.bunifuFlatButton1.Text = "Làm Mới";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.btlammoi_Click);
+            // 
+            // DPDate
+            // 
+            this.DPDate.BackColor = System.Drawing.Color.SeaGreen;
+            this.DPDate.BorderRadius = 0;
+            this.DPDate.ForeColor = System.Drawing.Color.White;
+            this.DPDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DPDate.FormatCustom = "dd/MM/yyyy";
+            this.DPDate.Location = new System.Drawing.Point(467, 250);
+            this.DPDate.Name = "DPDate";
+            this.DPDate.Size = new System.Drawing.Size(325, 36);
+            this.DPDate.TabIndex = 48;
+            this.DPDate.Value = new System.DateTime(2018, 3, 25, 12, 36, 1, 254);
+            this.DPDate.onValueChanged += new System.EventHandler(this.DPDoanhThu_onValueChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(345, 258);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(116, 20);
+            this.label16.TabIndex = 49;
+            this.label16.Text = "Xem theo ngày";
+            // 
+            // dataSet_ThuePhong
+            // 
+            this.dataSet_ThuePhong.DataSetName = "DataSet_ThuePhong";
+            this.dataSet_ThuePhong.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tHUEPHONGBindingSource
+            // 
+            this.tHUEPHONGBindingSource.DataMember = "THUEPHONG";
+            this.tHUEPHONGBindingSource.DataSource = this.dataSet_ThuePhong;
+            // 
+            // tHUEPHONGTableAdapter
+            // 
+            this.tHUEPHONGTableAdapter.ClearBeforeFill = true;
+            // 
+            // mATHUEDataGridViewTextBoxColumn
+            // 
+            this.mATHUEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mATHUEDataGridViewTextBoxColumn.DataPropertyName = "MATHUE";
+            this.mATHUEDataGridViewTextBoxColumn.FillWeight = 89.54314F;
+            this.mATHUEDataGridViewTextBoxColumn.HeaderText = "Mã thuê";
+            this.mATHUEDataGridViewTextBoxColumn.Name = "mATHUEDataGridViewTextBoxColumn";
+            this.mATHUEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mAKHACHHANGDataGridViewTextBoxColumn
+            // 
+            this.mAKHACHHANGDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mAKHACHHANGDataGridViewTextBoxColumn.DataPropertyName = "MAKHACHHANG";
+            this.mAKHACHHANGDataGridViewTextBoxColumn.FillWeight = 89.54314F;
+            this.mAKHACHHANGDataGridViewTextBoxColumn.HeaderText = "Mã khách";
+            this.mAKHACHHANGDataGridViewTextBoxColumn.Name = "mAKHACHHANGDataGridViewTextBoxColumn";
+            this.mAKHACHHANGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mAPHONGDataGridViewTextBoxColumn
+            // 
+            this.mAPHONGDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mAPHONGDataGridViewTextBoxColumn.DataPropertyName = "MAPHONG";
+            this.mAPHONGDataGridViewTextBoxColumn.FillWeight = 89.54314F;
+            this.mAPHONGDataGridViewTextBoxColumn.HeaderText = "Mã phòng";
+            this.mAPHONGDataGridViewTextBoxColumn.Name = "mAPHONGDataGridViewTextBoxColumn";
+            this.mAPHONGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nGAYVAODataGridViewTextBoxColumn
+            // 
+            this.nGAYVAODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nGAYVAODataGridViewTextBoxColumn.DataPropertyName = "NGAYVAO";
+            this.nGAYVAODataGridViewTextBoxColumn.FillWeight = 89.54314F;
+            this.nGAYVAODataGridViewTextBoxColumn.HeaderText = "Ngày vào";
+            this.nGAYVAODataGridViewTextBoxColumn.Name = "nGAYVAODataGridViewTextBoxColumn";
+            this.nGAYVAODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nGAYRADataGridViewTextBoxColumn
+            // 
+            this.nGAYRADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nGAYRADataGridViewTextBoxColumn.DataPropertyName = "NGAYRA";
+            this.nGAYRADataGridViewTextBoxColumn.FillWeight = 89.54314F;
+            this.nGAYRADataGridViewTextBoxColumn.HeaderText = "Ngày ra";
+            this.nGAYRADataGridViewTextBoxColumn.Name = "nGAYRADataGridViewTextBoxColumn";
+            this.nGAYRADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tRANGTHAIDataGridViewTextBoxColumn
+            // 
+            this.tRANGTHAIDataGridViewTextBoxColumn.DataPropertyName = "TRANGTHAI";
+            this.tRANGTHAIDataGridViewTextBoxColumn.FillWeight = 152.2843F;
+            this.tRANGTHAIDataGridViewTextBoxColumn.HeaderText = "Trang thái";
+            this.tRANGTHAIDataGridViewTextBoxColumn.Name = "tRANGTHAIDataGridViewTextBoxColumn";
+            this.tRANGTHAIDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tRANGTHAIDataGridViewTextBoxColumn.Width = 50;
             // 
             // TrangChuControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.DPDate);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.btdattraphong);
-            this.Controls.Add(this.bunifuCustomDataGrid1);
+            this.Controls.Add(this.DataDatPhong);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel14);
@@ -647,7 +710,8 @@
             this.Controls.Add(this.DDTang);
             this.Name = "TrangChuControl";
             this.Size = new System.Drawing.Size(800, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            this.Load += new System.EventHandler(this.TrangChuControl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataDatPhong)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -663,13 +727,16 @@
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_ThuePhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHUEPHONGBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid DataDatPhong;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel9;
@@ -682,13 +749,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuDropdown DDTang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private Bunifu.Framework.UI.BunifuFlatButton btdattraphong;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
@@ -710,5 +770,16 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuDatepicker DPDate;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mATHUEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mAKHACHHANGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mAPHONGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYVAODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYRADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tRANGTHAIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tHUEPHONGBindingSource;
+        private DataSet_ThuePhong dataSet_ThuePhong;
+        private DataSet_ThuePhongTableAdapters.THUEPHONGTableAdapter tHUEPHONGTableAdapter;
     }
 }

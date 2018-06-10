@@ -72,7 +72,7 @@ namespace QuanLyKhachSan.Layout.SubLayout
             if (fileAvatar.ShowDialog() == DialogResult.OK)
             {
                 pbavatar.Image = Image.FromFile(fileAvatar.FileName);
-                label8.Text = fileAvatar.SafeFileName;
+                label8.Text = fileAvatar.FileName;
                 linkavatar= fileAvatar.FileName;
             }
         }
@@ -130,7 +130,7 @@ namespace QuanLyKhachSan.Layout.SubLayout
                 //if ((MessageBox.Show(", "Xác nhận XOÁ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 con.Open();
                 cmdNV = new SqlCommand("EXECUTE IUD_NHANVIEN '" + HotelObject.getDta_NV.maNV + "',N'" + tbhoten.Text + "',N'" + ddchucvu.selectedValue +
-                                        "',N'" + ddGioiTinh.selectedValue + "','" + linkavatar + "','" + DPNgaySinh.Value + "','" + tbphone.Text + "',N'Update'", con);
+                                        "',N'" + ddGioiTinh.selectedValue + "','" + label8.Text + "','" + DPNgaySinh.Value + "','" + tbphone.Text + "',N'Update'", con);
                 cmdNV.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Cập nhật thành công");

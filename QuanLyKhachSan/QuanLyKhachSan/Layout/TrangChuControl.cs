@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyKhachSan.Layout
 {
@@ -148,6 +149,29 @@ namespace QuanLyKhachSan.Layout
         {
             tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, tang);
             tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, tang);
+        }
+
+        public void DisplayData()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
+            SqlDataAdapter adapt;
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from dbo.[thuephong] where NGAYRA >='"+DPDate.Value.ToShortDateString()+"'", con);
+            adapt.Fill(dt);
+            DataDatPhong.DataSource = dt;
+            con.Close();
+        }
+
+        private void TrangChuControl_Load(object sender, EventArgs e)
+        {
+            DPDate.Value = DateTime.Now;
+            DisplayData();
+        }
+
+        private void DPDoanhThu_onValueChanged(object sender, EventArgs e)
+        {
+            DisplayData();
         }
     }
 }

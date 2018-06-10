@@ -73,6 +73,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_PHONG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_ThuePhong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_ThuePhong.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="HotelObject\DichVuHo.cs" />
     <Compile Include="HotelObject\getDta_DV.cs" />
     <Compile Include="HotelObject\getDta_NV.cs" />
@@ -171,6 +182,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfo.cs" />
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\QLPhong.resx">
       <DependentUpon>QLPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +268,17 @@
     </None>
     <None Include="DataSet_PHONG.xss">
       <DependentUpon>DataSet_PHONG.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_ThuePhong.xsc">
+      <DependentUpon>DataSet_ThuePhong.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_ThuePhong.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_ThuePhong.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_ThuePhong.xss">
+      <DependentUpon>DataSet_ThuePhong.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
