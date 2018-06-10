@@ -101,5 +101,21 @@ namespace QuanLyKhachSan
             sqldatar = sqlcom.ExecuteReader();
             ngatketnoi();
         }
+
+        public void getUserInfo(string user)
+        {
+            ketnoi();
+            string sql = "select * from dbo.NHANVIEN where MANHANVIEN='" + user + "'";
+            sqlcom = new SqlCommand(sql, sqlconn);
+            sqldatar = sqlcom.ExecuteReader(); //select ExecuteReader();  insert/delete ExecuteNonQuery
+            if (sqldatar.Read() == true)
+            {
+                UserInfo.ID = user;
+                UserInfo.HoTen = sqldatar["HOTEN"].ToString();
+                UserInfo.ChucVu = sqldatar["CHUCVU"].ToString();
+                ngatketnoi();
+            }
+            else ngatketnoi();
+        }
     }
 }

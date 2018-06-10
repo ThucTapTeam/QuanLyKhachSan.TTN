@@ -25,7 +25,7 @@ namespace QuanLyKhachSan
 
         private void btnDoiMK_Click(object sender, EventArgs e)
         {
-           /* if ((MessageBox.Show("Xác nhận thay đổi", "Đổi mật khẩu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            if ((MessageBox.Show("Xác nhận thay đổi", "Đổi mật khẩu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
             {
                 con.Open();
                 string tk = comboBox1.Text;
@@ -53,12 +53,11 @@ namespace QuanLyKhachSan
                     MessageBox.Show("Mật khẩu sai.");
                 }
             }
-            */
+           
         }
 
         private void DoiMatKhau_Load(object sender, EventArgs e)
-        {
-            /*
+        {            
             con.Open();
             DataTable dt = new DataTable();
             adapt = new SqlDataAdapter("select MANHANVIEN from dbo.[NHANVIEN]", con);
@@ -78,7 +77,6 @@ namespace QuanLyKhachSan
                 txtMK1.Enabled = false;
                 label2.Enabled = false;
             }
-            */
         }
     }
 }
