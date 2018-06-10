@@ -70,7 +70,6 @@ namespace QuanLyKhachSan
         {
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Layout.TrangChuControl());
-
         }
 
         private void btqlnhanvien_Click(object sender, EventArgs e)
@@ -81,7 +80,7 @@ namespace QuanLyKhachSan
 
         private void btdown_Down(object sender, MouseEventArgs e)
         {
-
+            
         }
 
         private void btlogout_Click(object sender, EventArgs e)
@@ -111,6 +110,8 @@ namespace QuanLyKhachSan
 
         private void label5_Click(object sender, EventArgs e)
         {
+            DoiMatKhau dmk = new DoiMatKhau();
+            dmk.ShowDialog();
         }
     }
 }

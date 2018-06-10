@@ -55,6 +55,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnUpdate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -123,7 +124,7 @@
             this.bunifuFlatButton2.Text = "HỦY";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton2.Click += new System.EventHandler(this.bthuy_Click);
             // 
             // btdatphong
@@ -132,7 +133,7 @@
             this.btdatphong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
             this.btdatphong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btdatphong.BorderRadius = 0;
-            this.btdatphong.ButtonText = "ĐẶT PHÒNG";
+            this.btdatphong.ButtonText = "THÊM NHÂN VIÊN";
             this.btdatphong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btdatphong.DisabledColor = System.Drawing.Color.Gray;
             this.btdatphong.Iconcolor = System.Drawing.Color.Transparent;
@@ -155,19 +156,19 @@
             this.btdatphong.selected = false;
             this.btdatphong.Size = new System.Drawing.Size(206, 48);
             this.btdatphong.TabIndex = 34;
-            this.btdatphong.Text = "ĐẶT PHÒNG";
+            this.btdatphong.Text = "THÊM NHÂN VIÊN";
             this.btdatphong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btdatphong.Textcolor = System.Drawing.Color.White;
-            this.btdatphong.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdatphong.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btdatphong.Click += new System.EventHandler(this.btdatphong_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(98, 280);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 26);
+            this.label6.Size = new System.Drawing.Size(90, 22);
             this.label6.TabIndex = 31;
             this.label6.Text = "Ngày sinh";
             // 
@@ -178,20 +179,20 @@
             // 
             this.tbphone.Border.Class = "TextBoxBorder";
             this.tbphone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbphone.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbphone.Location = new System.Drawing.Point(315, 230);
             this.tbphone.Name = "tbphone";
             this.tbphone.PreventEnterBeep = true;
-            this.tbphone.Size = new System.Drawing.Size(272, 29);
+            this.tbphone.Size = new System.Drawing.Size(272, 27);
             this.tbphone.TabIndex = 30;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(98, 232);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 26);
+            this.label5.Size = new System.Drawing.Size(91, 22);
             this.label5.TabIndex = 29;
             this.label5.Text = "Điện thoại";
             // 
@@ -202,7 +203,7 @@
             // 
             this.tbpass.Border.Class = "TextBoxBorder";
             this.tbpass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbpass.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpass.Location = new System.Drawing.Point(315, 181);
             this.tbpass.Name = "tbpass";
             this.tbpass.PasswordChar = '°';
@@ -213,20 +214,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(98, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 26);
+            this.label4.Size = new System.Drawing.Size(83, 22);
             this.label4.TabIndex = 27;
             this.label4.Text = "Mật khẩu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(98, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 26);
+            this.label3.Size = new System.Drawing.Size(76, 22);
             this.label3.TabIndex = 26;
             this.label3.Text = "Giới tính";
             // 
@@ -237,20 +238,20 @@
             // 
             this.tbhoten.Border.Class = "TextBoxBorder";
             this.tbhoten.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbhoten.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbhoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbhoten.Location = new System.Drawing.Point(315, 88);
             this.tbhoten.Name = "tbhoten";
             this.tbhoten.PreventEnterBeep = true;
-            this.tbhoten.Size = new System.Drawing.Size(272, 29);
+            this.tbhoten.Size = new System.Drawing.Size(272, 27);
             this.tbhoten.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(98, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 26);
+            this.label1.Size = new System.Drawing.Size(146, 22);
             this.label1.TabIndex = 24;
             this.label1.Text = "Họ tên nhân viên";
             // 
@@ -284,7 +285,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Quicksand Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(231, 5);
             this.label2.Name = "label2";
@@ -311,10 +312,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(98, 333);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 26);
+            this.label7.Size = new System.Drawing.Size(76, 22);
             this.label7.TabIndex = 32;
             this.label7.Text = "Chức vụ";
             // 
@@ -339,10 +340,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(98, 385);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 26);
+            this.label9.Size = new System.Drawing.Size(62, 22);
             this.label9.TabIndex = 39;
             this.label9.Text = "Avatar";
             // 
@@ -378,7 +379,7 @@
             this.btavtar.Text = "Chọn ảnh";
             this.btavtar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btavtar.Textcolor = System.Drawing.Color.White;
-            this.btavtar.TextFont = new System.Drawing.Font("Quicksand Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btavtar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btavtar.Click += new System.EventHandler(this.btchonanh_Click);
             // 
             // pbavatar
@@ -394,7 +395,7 @@
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Quicksand", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(338, 426);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(152, 26);
@@ -413,11 +414,47 @@
             this.bunifuElipse1.ElipseRadius = 10;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(113)))), ((int)(((byte)(65)))));
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(144)))), ((int)(((byte)(82)))));
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpdate.BorderRadius = 0;
+            this.btnUpdate.ButtonText = "SỬA NHÂN VIÊN";
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.DisabledColor = System.Drawing.Color.Gray;
+            this.btnUpdate.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnUpdate.Iconimage = null;
+            this.btnUpdate.Iconimage_right = null;
+            this.btnUpdate.Iconimage_right_Selected = null;
+            this.btnUpdate.Iconimage_Selected = null;
+            this.btnUpdate.IconMarginLeft = 0;
+            this.btnUpdate.IconMarginRight = 0;
+            this.btnUpdate.IconRightVisible = true;
+            this.btnUpdate.IconRightZoom = 0D;
+            this.btnUpdate.IconVisible = true;
+            this.btnUpdate.IconZoom = 90D;
+            this.btnUpdate.IsTab = false;
+            this.btnUpdate.Location = new System.Drawing.Point(103, 462);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(144)))), ((int)(((byte)(82)))));
+            this.btnUpdate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(113)))), ((int)(((byte)(65)))));
+            this.btnUpdate.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnUpdate.selected = false;
+            this.btnUpdate.Size = new System.Drawing.Size(206, 48);
+            this.btnUpdate.TabIndex = 44;
+            this.btnUpdate.Text = "SỬA NHÂN VIÊN";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdate.Textcolor = System.Drawing.Color.White;
+            this.btnUpdate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // FormThemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 533);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pbavatar);
             this.Controls.Add(this.btavtar);
@@ -441,6 +478,7 @@
             this.Name = "FormThemNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormThemNV";
+            this.Load += new System.EventHandler(this.FormThemNV_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -477,5 +515,6 @@
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnUpdate;
     }
 }

@@ -15,7 +15,7 @@ namespace QuanLyKhachSan
         public LoginForm()
         {
             InitializeComponent();
-
+            
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
@@ -52,7 +52,7 @@ namespace QuanLyKhachSan
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
+            
         }
 
         private void mini_Click(object sender, EventArgs e)
@@ -77,6 +77,7 @@ namespace QuanLyKhachSan
                 MainForm mf = new MainForm(nv.HoTen, nv.ChucVu, nv.Avatar);
                 this.Hide();
                 mf.Show();
+                cn.getUserInfo(tbuser.Text.ToString());
             }
             else
             {
