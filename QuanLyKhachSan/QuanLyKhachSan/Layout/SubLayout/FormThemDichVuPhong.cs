@@ -12,11 +12,12 @@ namespace QuanLyKhachSan.Layout.SubLayout
 {
     public partial class FormThemDichVuPhong : Form
     {
-        
+        Controller.ThemDVPhongController dvphong = new Controller.ThemDVPhongController();
         public FormThemDichVuPhong()
         {
             InitializeComponent();
-            
+            dvphong.LayTenDichVu(ddDichVu);
+            dvphong.LayTenPhong(ddsotang, ddtenphong);
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
@@ -64,20 +65,33 @@ namespace QuanLyKhachSan.Layout.SubLayout
         {
             this.Hide();
         }
-        
+
         private void ddsotang_Selected(object sender, EventArgs e)
         {
-            //dvphong.LayTenPhong(ddsotang,ddtenphong);
+            dvphong.LayTenPhong(ddsotang, ddtenphong);
         }
 
         private void ddtenphong_Selected(object sender, EventArgs e)
         {
-            //dvphong.LayLoaiPhong(ddtenphong,tenphong,loaiphong);
+            dvphong.LayLoaiPhong(ddtenphong, tenphong, loaiphong);
         }
 
         private void btthemdichvu_Click(object sender, EventArgs e)
         {
-            
+            int transfer;
+            if (ddtenphong.selectedIndex != -1)
+            {
+                dvphong.ThemDichVu(ddtenphong, ddDichVu, out transfer);
+                if (transfer == 1)
+                {
+                    this.Hide();
+                }
+            }
+            else
+            {
+                Notification nf = new Notification("LỖI", "Bạn chưa chọn phòng.", "");
+                nf.Show();
+            }
         }
     }
 }

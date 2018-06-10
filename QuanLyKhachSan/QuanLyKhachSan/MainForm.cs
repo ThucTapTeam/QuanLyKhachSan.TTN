@@ -108,10 +108,5 @@ namespace QuanLyKhachSan
             panelMain.Controls.Add(new Layout.QLPhong());
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-            DoiMatKhau dmk = new DoiMatKhau();
-            dmk.ShowDialog();
-        }
     }
 }

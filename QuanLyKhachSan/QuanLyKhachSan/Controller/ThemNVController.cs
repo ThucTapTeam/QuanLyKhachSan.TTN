@@ -10,6 +10,7 @@ using DevComponents.DotNetBar.Controls;
 
 namespace QuanLyKhachSan.Controller
 {
+    //commit lại
     public class ThemNVController
     {
         string day, month, year;
@@ -24,11 +25,11 @@ namespace QuanLyKhachSan.Controller
             ch.ChuanHoaDate(nv.NgaySinh, out day, out month, out year);
             nv.NgaySinh = year + month + day;
             nv.MaNhanVien = conn.LayBien("EXEC PROC_SELECT_MANHANVIEN", 0);
-            for (int i = 2; i < nv.MaNhanVien.Length; i++)
+            for (int i = 2; i < nv.NgaySinh.Length; i++)
             {
-                temp = temp + nv.MaNhanVien[i];
+                temp = temp + nv.NgaySinh[i];
             }
-            nv.MaNhanVien = "NV" + (Int32.Parse(temp) + 1).ToString();
+            nv.NgaySinh = "NV" + (Int32.Parse(temp) + 1).ToString();
             nv.HoTen = ch.CH_Name(tbhoten);
             if (ch.Check_Phone(tbphone) == false)
             {

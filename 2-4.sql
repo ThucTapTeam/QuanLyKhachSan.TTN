@@ -252,6 +252,7 @@ AS
 BEGIN
 	SELECT MADICHVU FROM DICHVU order by MADICHVU asc
 END
+
 --lay ten dich vu
 GO
 create proc PROC_SELECT_TENDICHVU
